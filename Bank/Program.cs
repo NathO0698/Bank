@@ -14,7 +14,7 @@ CurrentAccount currentaccount = new CurrentAccount();
 
 CurrentAccount.Number = "35";
 CurrentAccount.Balance = "26";
-CurrentAccount.CreditLine = "62";
+CurrentAccount.CreditLine = "-100";
 CurrentAccount.Owner;
 
 class CurrentAccount {
@@ -24,10 +24,15 @@ class CurrentAccount {
     public Person Owner;
 
     public void Withdraw(){
-
+        Balance -= Number;
+        if (Balance < CreditLine){
+            throw new ArgumentException("Withdrawing impossible !");
+        }
+        return Balance;
     }
 
     public void Deposit(){
-
+        Balance += Number;
+        return Balance;
     }
     
