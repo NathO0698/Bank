@@ -1,6 +1,33 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+Person person = new Person();
 
-app.MapGet("/", () => "Hello World!");
+Person.FirstName = "N";
+Person.LastName = "O";
+Person.BirthDate = "";
 
-app.Run();
+class Person {
+    public string FirstName;
+    public string LastName;
+    public DateTime BirthDate;
+    }
+
+CurrentAccount currentaccount = new CurrentAccount();
+
+CurrentAccount.Number = "35";
+CurrentAccount.Balance = "26";
+CurrentAccount.CreditLine = "62";
+CurrentAccount.Owner;
+
+class CurrentAccount {
+    public string Number;
+    public double Balance;
+    public double CreditLine;
+    public Person Owner;
+
+    public void Withdraw(){
+
+    }
+
+    public void Deposit(){
+
+    }
+    
